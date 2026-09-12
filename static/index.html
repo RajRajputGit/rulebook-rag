@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rulebook RAG — The Rulebook That Argues With Itself</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="header-badge">AI DEVELOPER VIBE CODING ROUND</div>
+      <h1>Rulebook RAG <span>Assistant</span></h1>
+      <p class="subtitle">Evidence-based academic regulations assistant. Answers supported questions, refuses uncovered topics, and detects conflicting rules.</p>
+    </header>
+
+    <main class="main-content">
+      <!-- Question Form Card -->
+      <section class="card input-card">
+        <form id="question-form">
+          <label for="question-input" class="input-label">Ask a question about University Regulations:</label>
+          <div class="input-wrapper">
+            <input 
+              type="text" 
+              id="question-input" 
+              placeholder="e.g., Can a student with 60% attendance sit for the final exam with a medical certificate?" 
+              autocomplete="off" 
+              required
+            />
+            <button type="submit" id="submit-btn" class="btn btn-primary">
+              <span class="btn-text">Ask Assistant</span>
+              <div class="spinner hidden" id="btn-spinner"></div>
+            </button>
+          </div>
+        </form>
+
+        <!-- Quick Test Prompts -->
+        <div class="sample-prompts">
+          <span class="prompts-label">Try sample queries:</span>
+          <div class="prompt-chips">
+            <button type="button" class="chip chip-answerable" onclick="fillQuestion('What is the minimum CGPA required to avoid academic probation?')">
+              🟢 ANSWERABLE: Min CGPA for probation
+            </button>
+            <button type="button" class="chip chip-contradiction" onclick="fillQuestion('Can a student with 60% attendance sit for the final exam if they have a medical certificate?')">
+              🔴 CONTRADICTION: Attendance threshold
+            </button>
+            <button type="button" class="chip chip-contradiction" onclick="fillQuestion('Is there a grace period for paying tuition fees after the due date?')">
+              🔴 CONTRADICTION: Fee grace period
+            </button>
+            <button type="button" class="chip chip-notcovered" onclick="fillQuestion('What is the policy for reserving campus parking spots for undergraduate students?')">
+              🟡 NOT_COVERED: Parking spot reservation
+            </button>
+            <button type="button" class="chip chip-notcovered" onclick="fillQuestion('What is the university policy on using ChatGPT for homework assignments?')">
+              🟡 NOT_COVERED: AI & ChatGPT policy
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Response Display Card -->
+      <section id="results-section" class="results-section hidden">
+        <div class="card result-card">
+          <div class="result-header">
+            <span class="state-label">DETECTED STATE:</span>
+            <div id="state-badge" class="state-badge">ANSWERABLE</div>
+          </div>
+
+          <div class="question-display">
+            <span class="query-prefix">Question:</span>
+            <span id="display-question" class="query-text"></span>
+          </div>
+
+          <div class="answer-box">
+            <h3>System Response</h3>
+            <div id="answer-text" class="answer-content"></div>
+          </div>
+
+          <div class="evidence-section">
+            <div class="evidence-header">
+              <h3>Exact Supporting Evidence</h3>
+              <span id="evidence-count" class="evidence-counter">0 Passages</span>
+            </div>
+            <div id="evidence-list" class="evidence-grid"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>Rulebook RAG Engine | Local NumPy Cosine Matrix Search & Three-State Reasoning Pipeline</p>
+    </footer>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

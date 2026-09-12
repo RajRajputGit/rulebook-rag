@@ -1,0 +1,162 @@
+[
+  {
+    "question": "What is the policy for reserving campus parking spots for undergraduate students?",
+    "expected_state": "NOT_COVERED"
+  },
+  {
+    "question": "How many library books can a graduate student borrow at one time?",
+    "expected_state": "NOT_COVERED"
+  },
+  {
+    "question": "What is the university policy on using ChatGPT or AI tools for homework assignments?",
+    "expected_state": "NOT_COVERED"
+  },
+  {
+    "question": "Are pets allowed inside student dormitory rooms?",
+    "expected_state": "NOT_COVERED"
+  },
+  {
+    "question": "What is the procedure for appealing a campus parking fine?",
+    "expected_state": "NOT_COVERED"
+  },
+  {
+    "question": "Can undergraduate students apply for a campus bicycle storage locker?",
+    "expected_state": "NOT_COVERED"
+  },
+  {
+    "question": "What is the discount provided at the university cafeteria for student meal plans?",
+    "expected_state": "NOT_COVERED"
+  },
+  {
+    "question": "How do students apply for study abroad exchange programs in Europe?",
+    "expected_state": "NOT_COVERED"
+  },
+  {
+    "question": "Is there a printing page limit per semester at the university computer lab?",
+    "expected_state": "NOT_COVERED"
+  },
+  {
+    "question": "Can undergraduate students apply for on-campus car washing permits?",
+    "expected_state": "NOT_COVERED"
+  },
+  {
+    "question": "What is the procedure for booking a private group study room in the main campus library?",
+    "expected_state": "NOT_COVERED"
+  },
+  {
+    "question": "Can a student audit a course without paying tuition fees?",
+    "expected_state": "NOT_COVERED"
+  },
+  {
+    "question": "What is the policy on student organization funding for social events?",
+    "expected_state": "NOT_COVERED"
+  },
+  {
+    "question": "How many credits can be transferred from an online MOOC certificate course?",
+    "expected_state": "NOT_COVERED"
+  },
+  {
+    "question": "What are the operating hours of the campus health clinic on weekends?",
+    "expected_state": "NOT_COVERED"
+  },
+  {
+    "question": "Are students allowed to host guest speakers without prior approval from the student union?",
+    "expected_state": "NOT_COVERED"
+  },
+  {
+    "question": "How can a student apply for an emergency campus housing grant?",
+    "expected_state": "NOT_COVERED"
+  },
+  {
+    "question": "What is the university policy on recycling electronics on campus?",
+    "expected_state": "NOT_COVERED"
+  },
+  {
+    "question": "Can students use the campus fitness center after graduating?",
+    "expected_state": "NOT_COVERED"
+  },
+  {
+    "question": "What is the maximum duration a student can take a sabbatical for startup incubation?",
+    "expected_state": "NOT_COVERED"
+  },
+  {
+    "question": "How are dormitory room assignments decided for incoming international students?",
+    "expected_state": "NOT_COVERED"
+  },
+  {
+    "question": "What is the procedure for obtaining a campus gym locker key?",
+    "expected_state": "NOT_COVERED"
+  },
+  {
+    "question": "Are students permitted to skateboard on campus pathways?",
+    "expected_state": "NOT_COVERED"
+  },
+  {
+    "question": "What is the reimbursement rate for student travel to academic conferences?",
+    "expected_state": "NOT_COVERED"
+  },
+  {
+    "question": "Can students reserve private campus barbecue pits for weekend parties?",
+    "expected_state": "NOT_COVERED"
+  },
+  {
+    "question": "What is the minimum CGPA required to avoid academic probation?",
+    "expected_state": "ANSWERABLE"
+  },
+  {
+    "question": "What is the maximum credit load permitted for an undergraduate student in a primary semester without an overload petition?",
+    "expected_state": "ANSWERABLE"
+  },
+  {
+    "question": "What is the tuition fee per credit hour for undergraduate students?",
+    "expected_state": "ANSWERABLE"
+  },
+  {
+    "question": "How many quality points are assigned for a letter grade of 'B+'?",
+    "expected_state": "ANSWERABLE"
+  },
+  {
+    "question": "What CGPA is required to graduate Summa Cum Laude?",
+    "expected_state": "ANSWERABLE"
+  },
+  {
+    "question": "How many credit hours are required to qualify for a Bachelor's degree?",
+    "expected_state": "ANSWERABLE"
+  },
+  {
+    "question": "Within how many hours must a medical absence be reported to the University Health Center?",
+    "expected_state": "ANSWERABLE"
+  },
+  {
+    "question": "What is the maximum number of voluntary course withdrawals allowed for undergraduate students throughout their degree?",
+    "expected_state": "ANSWERABLE"
+  },
+  {
+    "question": "What is the penalty fee for losing a physical university ID card?",
+    "expected_state": "ANSWERABLE"
+  },
+  {
+    "question": "What is the maximum number of years allowed to complete an undergraduate degree program?",
+    "expected_state": "ANSWERABLE"
+  },
+  {
+    "question": "Can a student with 65% attendance take the final exam if they have a medical certificate?",
+    "expected_state": "CONTRADICTION"
+  },
+  {
+    "question": "What attendance percentage is required for final examinations if a medical exemption is submitted?",
+    "expected_state": "CONTRADICTION"
+  },
+  {
+    "question": "Is there a grace period for paying tuition fees after the due date?",
+    "expected_state": "CONTRADICTION"
+  },
+  {
+    "question": "Does a late payment fee apply immediately on the day after the tuition due date or after a grace period?",
+    "expected_state": "CONTRADICTION"
+  },
+  {
+    "question": "If a student withdraws from a course in Week 6, does it appear on their official transcript?",
+    "expected_state": "CONTRADICTION"
+  }
+]
