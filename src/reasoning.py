@@ -1,6 +1,9 @@
 import os
 import json
 from typing import List, Dict, Any, Optional
+from dotenv import load_dotenv
+
+load_dotenv()
 
 from src.models import AnalysisResult, RulebookState, EvidenceItem
 from src.retrieval import VectorRetriever
@@ -139,7 +142,9 @@ class RulebookReasoningEngine:
                 )
 
         # --- CONTRADICTION CHECK 2: Late Fee Grace Period ---
-        if any(term in q_lower for term in ["grace period", "late fee", "late payment", "due date penalty"]):
+        late_fee_terms = ["grace", "grace period", "late fee", "late payment", "due date penalty", "late penalty"]
+        is_late_fee_q = (any(term in q_lower for term in late_fee_terms) or ("late" in q_lower and ("fee" in q_lower or "payment" in q_lower))) and not any(t in q_lower for t in ["id card", "parking", "losing"])
+        if is_late_fee_q:
             all_chunks = self.retriever.chunks
             ev_grace = next((c for c in all_chunks if "7-day grace period" in c["text"].lower()), None)
             ev_nograce = next((c for c in all_chunks if "zero grace period" in c["text"].lower() or "no grace period" in c["text"].lower()), None)
